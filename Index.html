@@ -1,1 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Happy Birthday her 🎂</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: #fff5fa;
+    color: #3b2733;
+    overflow-x: hidden;
+}
+
+body.locked {
+    overflow: hidden;
+    height: 100vh;
+}
+
+body.unlocked {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    font-size: 22px;
+    animation: floatHeart linear forwards;
+    pointer-events: none;
+    z-index: 100;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+
+    background:
+        radial-gradient(circle at 20% 20%, #ffd6e8 0%, transparent 30%),
+        radial-gradient(circle at 80% 30%, #e7d7ff 0%, transparent 30%),
+        linear-gradient(135deg, #fff0f7, #eee7ff);
+}
+
+.hero-content {
+    max-width: 850px;
+    animation: appear 1.5s ease;
+}
+
+.birthday-small {
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #a64d79;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(48px, 8vw, 88px);
+    line-height: 1;
+    color: #d84d83;
+    text-shadow: 3px 3px 0px #ffffff;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #7d5ab5;
+}
+
+.hero-text {
+    font-size: 21px;
+    color: #624a58;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: auto;
+}
+
+.cake {
+    font-size: 85px;
+    margin-bottom: 20px;
+    animation: cakeBounce 2s infinite;
+}
+
+@keyframes cakeBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-btn {
+    margin-top: 35px;
+    display: inline-block;
+    padding: 14px 30px;
+    background: #d84d83;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 17px;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(216, 77, 131, 0.25);
+    cursor: pointer;
+}
+
+.scroll-btn:hover {
+    transform: translateY(-3px);
+    background: #bd396c;
+}
+
+section {
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #c94778;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #765d6b;
+    margin-bottom: 45px;
+    font-size: 18px;
+}
+
+.message-section {
+    background: white;
+}
+
+.message-card {
+    max-width: 750px;
+    margin: auto;
+    background: linear-gradient(135deg, #fff4f8, #f5efff);
+    padding: 45px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(80, 40, 70, 0.10);
+    text-align: center;
+    line-height: 1.9;
+    font-size: 18px;
+}
+
+.message-card .hello {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    color: #d84d83;
+    margin-bottom: 20px;
+}
+
+.signature {
+    margin-top: 25px;
+    font-family: Georgia, serif;
+    font-size: 23px;
+    color: #7953a5;
+}
+
+.gallery-section {
+    background: #fff7fb;
+}
+
+.gallery {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.photo {
+    height: 330px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #eee;
+    box-shadow: 0 10px 25px rgba(70, 40, 60, 0.12);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.photo:hover {
+    transform: translateY(-8px) rotate(1deg);
+    box-shadow: 0 18px 35px rgba(70, 40, 60, 0.18);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.photo:hover img {
+    transform: scale(1.08);
+}
+
+.surprise-section {
+    text-align: center;
+    background:
+        radial-gradient(circle at 10% 20%, #ffd8e8, transparent 30%),
+        radial-gradient(circle at 90% 80%, #dfd0ff, transparent 30%),
+        #fff;
+}
+
+.surprise-box {
+    max-width: 700px;
+    margin: auto;
+}
+
+.gift {
+    font-size: 100px;
+    cursor: pointer;
+    transition: 0.4s;
+    display: inline-block;
+}
+
+.gift:hover {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.surprise-button {
+    border: none;
+    background: #7d5ab5;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.surprise-button:hover {
+    transform: scale(1.05);
+    background: #67479c;
+}
+
+.hidden-message {
+    display: none;
+    margin-top: 30px;
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(60, 30, 70, 0.12);
+    font-size: 19px;
+    line-height: 1.8;
+    animation: appear 0.8s ease;
+}
+
+.hidden-message.show {
+    display: block;
+}
+
+.final-section {
+    text-align: center;
+    background: linear-gradient(135deg, #f7e8ff, #ffe8f2);
+    padding: 100px 20px;
+}
+
+.final-section h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 7vw, 70px);
+    color: #d84d83;
+    margin-bottom: 20px;
+}
+
+.final-section p {
+    font-size: 20px;
+    color: #654e5c;
+}
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    background: #30212b;
+    color: #eadce5;
+    font-size: 14px;
+}
+
+@media (max-width: 750px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .photo {
+        height: 260px;
+    }
+
+    .message-card {
+        padding: 30px 22px;
+    }
+
+    .hero-text {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .photo {
+        height: 380px;
+    }
+
+    section {
+        padding: 65px 15px;
+    }
+
+}
+
+</style>
+</head>
+
+<body class="locked">
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="cake">🎂</div>
+
+        <div class="birthday-small">
+            A little birthday surprise
+        </div>
+
+        <h1>
+            Happy Birthday
+            <span>her! 💖</span>
+        </h1>
+
+        <p class="hero-text">
+            Today is your special day, so here's a little
+            corner of the internet made especially for you. 🌸
+        </p>
+
+        <a href="#message" class="scroll-btn" onclick="unlockPage(event)">
+            Start the Surprise ✨
+        </a>
+
+    </div>
+
+</section>
+
+<section class="message-section" id="message">
+
+    <h2 class="section-title">
+        A Little Message 💌
+    </h2>
+
+    <p class="section-subtitle">
+        From Rudra
+    </p>
+
+    <div class="message-card">
+
+        <div class="hello">
+            Dear her,
+        </div>
+
+        <p>
+            Happy Birthday! 🎂✨
+        </p>
+
+        <br>
+
+        <p>
+            I hope this day brings you lots of happiness,
+            laughter and beautiful memories.
+            You deserve all the good things that life
+            has to offer.
+        </p>
+
+        <br>
+
+        <p>
+            Keep smiling, keep shining and keep being
+            the amazing person you are. 🌸
+        </p>
+
+        <br>
+
+        <p>
+            May this new year of your life be filled with
+            happiness, success, adventures and countless
+            reasons to smile.
+        </p>
+
+        <div class="signature">
+            With lots of wishes,<br>
+            Rudra ❤️
+        </div>
+
+    </div>
+
+</section>
+
+<section class="gallery-section">
+
+    <h2 class="section-title">
+        Little Memories 📸
+    </h2>
+
+    <p class="section-subtitle">
+        Some moments worth remembering 💕
+    </p>
+
+    <div class="gallery">
+
+        <div class="photo">
+            <img src="sam-photos/photo1.jpg.jpeg" alt="her photo 1">
+        </div>
+
+        <div class="photo">
+            <img src="sam-photos/photo2.jpg.jpeg" alt="her photo 2">
+        </div>
+
+        <div class="photo">
+            <img src="sam-photos/photo3.jpg.jpeg" alt="her photo 3">
+        </div>
+
+        <div class="photo">
+            <img src="sam-photos/photo4.jpg.jpeg" alt="her photo 4">
+        </div>
+
+        <div class="photo">
+            <img src="sam-photos/photo5.jpg.jpeg" alt="her photo 5">
+        </div>
+
+        <div class="photo">
+            <img src="sam-photos/photo6.jpg.jpeg" alt="her photo 6">
+        </div>
+
+        <div class="photo">
+            <img src="sam-photos/photo7.jpg.jpeg" alt="her photo 7">
+        </div>
+
+    </div>
+
+</section>
+
+<section class="surprise-section">
+
+    <div class="surprise-box">
+
+        <h2 class="section-title">
+            One More Thing... 🎁
+        </h2>
+
+        <p class="section-subtitle">
+            There's a little surprise waiting for you.
+        </p>
+
+        <div class="gift">
+            🎁
+        </div>
+
+        <br>
+
+        <button class="surprise-button" onclick="openSurprise()">
+            Open Your Gift 💝
+        </button>
+
+        <div id="surprise" class="hidden-message">
+
+            <p>
+                🎉 SURPRISE! 🎉
+            </p>
+
+            <br>
+
+            <p>
+                May your birthday be as wonderful,
+                bright and beautiful as you are. 💖
+            </p>
+
+            <br>
+
+            <p>
+                Here's to another year of amazing
+                memories, laughter and happiness! 🥳
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="final-section">
+
+    <h2>
+        Happy Birthday, her! 🎂
+    </h2>
+
+    <p>
+        Have the most amazing day! 🌸✨
+    </p>
+
+</section>
+
+<div class="footer">
+    Made with ❤️ by Rudra
+</div>
+
+<script>
+
+function unlockPage(event) {
+
+    event.preventDefault();
+
+    document.body.classList.remove("locked");
+    document.body.classList.add("unlocked");
+
+    document.getElementById("message").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+function openSurprise() {
+
+    const surprise = document.getElementById("surprise");
+
+    surprise.classList.add("show");
+
+    createConfetti();
+
+}
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const symbols = ["💖", "💕", "🌸", "✨", "💗"];
+
+    heart.innerHTML =
+        symbols[Math.floor(Math.random() * symbols.length)];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 20) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 10000);
+
+}
+
+setInterval(createHeart, 900);
+
+function createConfetti() {
+
+    const pieces = ["🎉", "✨", "💖", "🎊", "🌸"];
+
+    for (let i = 0; i < 35; i++) {
+
+        const confetti = document.createElement("div");
+
+        confetti.innerHTML =
+            pieces[Math.floor(Math.random() * pieces.length)];
+
+        confetti.style.position = "fixed";
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.top = "-30px";
+        confetti.style.fontSize = "25px";
+        confetti.style.zIndex = "999";
+        confetti.style.pointerEvents = "none";
+
+        const duration =
+            2 + Math.random() * 3;
+
+        confetti.style.transition =
+            `top ${duration}s linear, transform ${duration}s linear`;
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+
+            confetti.style.top = "110vh";
+
+            confetti.style.transform =
+                `rotate(${Math.random() * 720}deg)`;
+
+        }, 50);
+
+        setTimeout(() => {
+
+            confetti.remove();
+
+        }, duration * 1000 + 500);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
