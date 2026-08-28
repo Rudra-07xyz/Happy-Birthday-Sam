@@ -35,6 +35,11 @@ body.unlocked {
     overflow-y: auto;
 }
 
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
 .heart {
     position: fixed;
     bottom: -40px;
@@ -45,6 +50,7 @@ body.unlocked {
 }
 
 @keyframes floatHeart {
+
     0% {
         transform: translateY(0) rotate(0deg);
         opacity: 0;
@@ -58,65 +64,135 @@ body.unlocked {
         transform: translateY(-110vh) rotate(360deg);
         opacity: 0;
     }
+
 }
 
+
+/* =========================
+   HERO SECTION
+========================= */
+
 .hero {
+
     min-height: 100vh;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     text-align: center;
+
     padding: 30px 20px;
+
     position: relative;
 
     background:
-        radial-gradient(circle at 20% 20%, #ffd6e8 0%, transparent 30%),
-        radial-gradient(circle at 80% 30%, #e7d7ff 0%, transparent 30%),
-        linear-gradient(135deg, #fff0f7, #eee7ff);
+        radial-gradient(
+            circle at 20% 20%,
+            #ffd6e8 0%,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 30%,
+            #e7d7ff 0%,
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff0f7,
+            #eee7ff
+        );
 }
+
 
 .hero-content {
+
     max-width: 850px;
+
     animation: appear 1.5s ease;
+
 }
+
 
 .birthday-small {
+
     font-size: 20px;
+
     letter-spacing: 3px;
+
     text-transform: uppercase;
+
     color: #a64d79;
+
     margin-bottom: 18px;
+
 }
+
 
 .hero h1 {
+
     font-family: Georgia, serif;
-    font-size: clamp(48px, 8vw, 88px);
+
+    font-size: clamp(
+        48px,
+        8vw,
+        88px
+    );
+
     line-height: 1;
+
     color: #d84d83;
-    text-shadow: 3px 3px 0px #ffffff;
+
+    text-shadow:
+        3px 3px 0px #ffffff;
+
     margin-bottom: 20px;
+
 }
+
 
 .hero h1 span {
+
     display: block;
+
     color: #7d5ab5;
+
 }
+
 
 .hero-text {
+
     font-size: 21px;
+
     color: #624a58;
+
     line-height: 1.7;
+
     max-width: 650px;
+
     margin: auto;
+
 }
+
 
 .cake {
+
     font-size: 85px;
+
     margin-bottom: 20px;
-    animation: cakeBounce 2s infinite;
+
+    animation:
+        cakeBounce 2s infinite;
+
 }
 
+
 @keyframes cakeBounce {
+
     0%, 100% {
         transform: translateY(0);
     }
@@ -124,274 +200,629 @@ body.unlocked {
     50% {
         transform: translateY(-12px);
     }
+
 }
 
+
 @keyframes appear {
+
     from {
+
         opacity: 0;
-        transform: translateY(30px);
+
+        transform:
+            translateY(30px);
+
     }
 
     to {
+
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
+
     }
+
 }
+
+
+/* =========================
+   START BUTTON
+========================= */
 
 .scroll-btn {
+
     margin-top: 35px;
+
     display: inline-block;
+
     padding: 14px 30px;
+
     background: #d84d83;
+
     color: white;
+
     text-decoration: none;
+
     border-radius: 50px;
+
     font-size: 17px;
+
     transition: 0.3s;
-    box-shadow: 0 8px 20px rgba(216, 77, 131, 0.25);
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            216,
+            77,
+            131,
+            0.25
+        );
+
     cursor: pointer;
+
 }
+
 
 .scroll-btn:hover {
-    transform: translateY(-3px);
+
+    transform:
+        translateY(-3px);
+
     background: #bd396c;
+
 }
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 section {
+
     padding: 80px 20px;
+
 }
+
 
 .section-title {
+
     text-align: center;
+
     font-family: Georgia, serif;
+
     font-size: 42px;
+
     color: #c94778;
+
     margin-bottom: 15px;
+
 }
+
 
 .section-subtitle {
+
     text-align: center;
+
     color: #765d6b;
+
     margin-bottom: 45px;
+
     font-size: 18px;
+
 }
+
+
+/* =========================
+   MESSAGE SECTION
+========================= */
 
 .message-section {
+
     background: white;
+
 }
+
 
 .message-card {
+
     max-width: 750px;
+
     margin: auto;
-    background: linear-gradient(135deg, #fff4f8, #f5efff);
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff4f8,
+            #f5efff
+        );
+
     padding: 45px;
+
     border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(80, 40, 70, 0.10);
+
+    box-shadow:
+        0 15px 40px
+        rgba(
+            80,
+            40,
+            70,
+            0.10
+        );
+
     text-align: center;
+
     line-height: 1.9;
+
     font-size: 18px;
+
 }
+
 
 .message-card .hello {
+
     font-family: Georgia, serif;
+
     font-size: 28px;
+
     color: #d84d83;
+
     margin-bottom: 20px;
+
 }
+
 
 .signature {
+
     margin-top: 25px;
+
     font-family: Georgia, serif;
+
     font-size: 23px;
+
     color: #7953a5;
+
 }
+
+
+/* =========================
+   PHOTO GALLERY
+========================= */
 
 .gallery-section {
+
     background: #fff7fb;
+
 }
+
 
 .gallery {
+
     max-width: 1050px;
+
     margin: auto;
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    /*
+       Automatically creates columns
+       depending on screen width.
+    */
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                250px,
+                1fr
+            )
+        );
+
     gap: 20px;
+
+    align-items: start;
+
 }
+
+
+/*
+   IMPORTANT:
+
+   There is NO fixed height.
+
+   Every image keeps its original
+   aspect ratio.
+
+   Therefore:
+   - 9:16 stays 9:16
+   - 1080:1900 stays 1080:1900
+   - 1:1 stays 1:1
+   - landscape stays landscape
+
+   Nothing gets cropped.
+*/
 
 .photo {
-    height: 330px;
+
     overflow: hidden;
+
     border-radius: 20px;
+
     background: #eee;
-    box-shadow: 0 10px 25px rgba(70, 40, 60, 0.12);
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            70,
+            40,
+            60,
+            0.12
+        );
+
     cursor: pointer;
+
     transition: 0.4s;
+
 }
+
 
 .photo:hover {
-    transform: translateY(-8px) rotate(1deg);
-    box-shadow: 0 18px 35px rgba(70, 40, 60, 0.18);
+
+    transform:
+        translateY(-8px)
+        rotate(1deg);
+
+    box-shadow:
+        0 18px 35px
+        rgba(
+            70,
+            40,
+            60,
+            0.18
+        );
+
 }
+
 
 .photo img {
+
+    /*
+       Width adjusts to the gallery.
+
+       Height is AUTO, so the browser
+       calculates it from the original
+       image dimensions.
+    */
+
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+    height: auto;
+
     display: block;
+
     transition: 0.5s;
+
 }
+
 
 .photo:hover img {
-    transform: scale(1.08);
+
+    transform:
+        scale(1.04);
+
 }
+
+
+/* =========================
+   SURPRISE SECTION
+========================= */
 
 .surprise-section {
+
     text-align: center;
+
     background:
-        radial-gradient(circle at 10% 20%, #ffd8e8, transparent 30%),
-        radial-gradient(circle at 90% 80%, #dfd0ff, transparent 30%),
+
+        radial-gradient(
+            circle at 10% 20%,
+            #ffd8e8,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 80%,
+            #dfd0ff,
+            transparent 30%
+        ),
+
         #fff;
+
 }
+
 
 .surprise-box {
+
     max-width: 700px;
+
     margin: auto;
+
 }
+
 
 .gift {
+
     font-size: 100px;
+
     cursor: pointer;
+
     transition: 0.4s;
+
     display: inline-block;
+
 }
+
 
 .gift:hover {
-    transform: scale(1.1) rotate(-5deg);
+
+    transform:
+        scale(1.1)
+        rotate(-5deg);
+
 }
+
 
 .surprise-button {
+
     border: none;
+
     background: #7d5ab5;
+
     color: white;
+
     padding: 15px 32px;
+
     border-radius: 50px;
+
     font-size: 18px;
+
     cursor: pointer;
+
     margin-top: 20px;
+
     transition: 0.3s;
+
 }
+
 
 .surprise-button:hover {
-    transform: scale(1.05);
+
+    transform:
+        scale(1.05);
+
     background: #67479c;
+
 }
+
 
 .hidden-message {
+
     display: none;
+
     margin-top: 30px;
+
     background: white;
+
     padding: 35px;
+
     border-radius: 25px;
-    box-shadow: 0 12px 35px rgba(60, 30, 70, 0.12);
+
+    box-shadow:
+        0 12px 35px
+        rgba(
+            60,
+            30,
+            70,
+            0.12
+        );
+
     font-size: 19px;
+
     line-height: 1.8;
-    animation: appear 0.8s ease;
+
+    animation:
+        appear 0.8s ease;
+
 }
+
 
 .hidden-message.show {
+
     display: block;
+
 }
+
+
+/* =========================
+   FINAL SECTION
+========================= */
 
 .final-section {
+
     text-align: center;
-    background: linear-gradient(135deg, #f7e8ff, #ffe8f2);
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7e8ff,
+            #ffe8f2
+        );
+
     padding: 100px 20px;
+
 }
+
 
 .final-section h2 {
+
     font-family: Georgia, serif;
-    font-size: clamp(40px, 7vw, 70px);
+
+    font-size:
+        clamp(
+            40px,
+            7vw,
+            70px
+        );
+
     color: #d84d83;
+
     margin-bottom: 20px;
+
 }
+
 
 .final-section p {
+
     font-size: 20px;
+
     color: #654e5c;
+
 }
 
+
+/* =========================
+   FOOTER
+========================= */
+
 .footer {
+
     text-align: center;
+
     padding: 25px;
+
     background: #30212b;
+
     color: #eadce5;
+
     font-size: 14px;
+
 }
+
+
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 750px) {
 
     .gallery {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
         gap: 14px;
+
     }
 
-    .photo {
-        height: 260px;
-    }
 
     .message-card {
-        padding: 30px 22px;
+
+        padding:
+            30px 22px;
+
     }
 
+
     .hero-text {
+
         font-size: 18px;
+
     }
 
 }
 
+
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 500px) {
 
     .gallery {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
+
     }
 
-    .photo {
-        height: 380px;
-    }
 
     section {
-        padding: 65px 15px;
+
+        padding:
+            65px 15px;
+
     }
 
 }
 
 </style>
+
 </head>
 
+
 <body class="locked">
+
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
     <div class="hero-content">
 
-        <div class="cake">🎂</div>
+        <div class="cake">
+            🎂
+        </div>
+
 
         <div class="birthday-small">
             A little birthday surprise
         </div>
 
+
         <h1>
+
             Happy Birthday
-            <span>Samadrita! 💖</span>
+
+            <span>
+                Samadrita! 💖
+            </span>
+
         </h1>
 
+
         <p class="hero-text">
-            Today is your special day, so here's a little
-            corner of the internet made especially for you. 🌸
+
+            Today is your special day,
+            so here's a little corner of
+            the internet made especially
+            for you. 🌸
+
         </p>
 
-        <a href="#message" class="scroll-btn" onclick="unlockPage(event)">
+
+        <a
+            href="#message"
+            class="scroll-btn"
+            onclick="unlockPage(event)"
+        >
+
             Start the Surprise ✨
+
         </a>
 
     </div>
@@ -399,301 +830,599 @@ section {
 </section>
 
 
-<section class="message-section" id="message">
+
+<!-- =========================
+     MESSAGE
+========================= -->
+
+<section
+    class="message-section"
+    id="message"
+>
+
 
     <h2 class="section-title">
+
         A Little Message 💌
+
     </h2>
 
+
     <p class="section-subtitle">
+
         From Rudra
+
     </p>
+
 
     <div class="message-card">
 
+
         <div class="hello">
+
             First of all, Happy Birthday Neku🎂🍨....
+
         </div>
 
+
         <p>
-            Yes, I had already told you that I would call you by this name,
-            but since I was thinking of using it here, I went with it😉....
+
+            Yes, I had already told you that I would
+            call you by this name, but since I was
+            thinking of using it here, I went with it😉....
+
         </p>
+
 
         <br>
 
+
         <p>
+
             Wishing you a very, very Happy Birthday😃...
-            Many people will probably wish you today, and this might be just
-            another usual note, just like all the others...
+            Many people will probably wish you today,
+            and this might be just another usual note,
+            just like all the others...
+
         </p>
+
 
         <br>
 
+
         <p>
-            Yes, I admit, this website might not be that unique either..
-            like super attractive...🫠🫠🫠
+
+            Yes, I admit, this website might not be
+            that unique either.. like super attractive...🫠🫠🫠
+
         </p>
+
 
         <br>
 
+
         <p>
+
             But Electrical Engineer hu..CSE wala nahii.... NVM
+
         </p>
+
 
         <br>
 
+
         <p>
-            Idk why, but I just felt like trying something a little unique
-            this time.. So I thought, why not create a little corner for you
-            in this vast world of the internet... That's why I tried to make
-            something specially for you...🏳️🫠🙂‍↔️
+
+            Idk why, but I just felt like trying
+            something a little unique this time..
+            So I thought, why not create a little
+            corner for you in this vast world of
+            the internet... That's why I tried to
+            make something specially for you...🏳️🫠🙂‍↔️
+
         </p>
+
 
         <br>
 
+
         <p>
-            Goshh, a new year of your life... I hope this year turns out to be
-            a really good year for you... May all your ambitions from your
-            college life slowly come true, one by one...
+
+            Goshh, a new year of your life...
+            I hope this year turns out to be a
+            really good year for you...
+            May all your ambitions from your
+            college life slowly come true,
+            one by one...
+
         </p>
+
 
         <br>
 
+
         <p>
-            Just stay as cute🎀, as hardworking📈, as ambitious💁🏻‍♀️,
-            and as little-kido-type as you are... Yeahh, but a serious look
-            on your face sometimes does look good on you...😶
+
+            Just stay as cute🎀,
+            as hardworking📈,
+            as ambitious💁🏻‍♀️,
+            and as little-kido-type as you are...
+            Yeahh, but a serious look on your
+            face sometimes does look good on you...😶
+
         </p>
+
 
         <br>
 
+
         <p>
-            Maybe I don't have that perception of that scary Sonu anymore,
+
+            Maybe I don't have that perception
+            of that scary Sonu anymore,
             rather, I do see a little junior kid now😂🙏🏻🤓
+
         </p>
+
 
         <br>
 
+
         <p>
+
             Study hard🤓 and enjoy a lot too🙂‍↕️🙂‍↕️
             I hope all your dreams come true🤍🏳️
+
         </p>
+
 
         <br>
 
+
         <p>
+
             "And don't forget to give me a treattttttt 😭😂"
+
         </p>
+
 
         <br>
 
+
         <p>
+
             - Yehi thaa most important wala line
+
         </p>
+
 
         <div class="signature">
-            Enjoy your special day, Miss Samadrita.. 1st year wali Junior 👻🤪🤍🥳🍰🎂
+
+            Enjoy your special day,
+            Miss Samadrita..
+            1st year wali Junior 👻🤪🤍🥳🍰🎂
+
         </div>
+
 
     </div>
 
 </section>
 
+
+
+<!-- =========================
+     PHOTO GALLERY
+========================= -->
 
 <section class="gallery-section">
 
-    <h2 class="section-title">
-    Kaunn hai wo Junior 💁🏻‍♀️ ?
-</h2>
 
-<p class="section-subtitle">
-    Yehh rahi wo bachiiii 👻
-</p>
+    <h2 class="section-title">
+
+        Kaunn hai wo Junior 💁🏻‍♀️ ?
+
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        Yehh rahi wo bachiiii 👻
+
+    </p>
+
 
     <div class="gallery">
 
-        <div class="photo">
-            <img src="Images/i1.jpeg" alt="Samadrita photo 1">
-        </div>
 
         <div class="photo">
-            <img src="Images/i2.jpeg" alt="Samadrita photo 2">
+
+            <img
+                src="Images/i1.jpeg"
+                alt="Samadrita photo 1"
+            >
+
         </div>
 
-        <div class="photo">
-            <img src="Images/i3.jpeg" alt="Samadrita photo 3">
-        </div>
 
         <div class="photo">
-            <img src="Images/i4.jpeg" alt="Samadrita photo 4">
+
+            <img
+                src="Images/i2.jpeg"
+                alt="Samadrita photo 2"
+            >
+
         </div>
+
+
+        <div class="photo">
+
+            <img
+                src="Images/i3.jpeg"
+                alt="Samadrita photo 3"
+            >
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="Images/i4.jpeg"
+                alt="Samadrita photo 4"
+            >
+
+        </div>
+
 
     </div>
 
 </section>
 
+
+
+<!-- =========================
+     SURPRISE
+========================= -->
 
 <section class="surprise-section">
 
+
     <div class="surprise-box">
 
+
         <h2 class="section-title">
+
             One More Thing... 🎁
+
         </h2>
 
+
         <p class="section-subtitle">
+
             There's a little surprise waiting for you.
+
         </p>
 
+
         <div class="gift">
+
             🎁
+
         </div>
+
 
         <br>
 
-        <button class="surprise-button" onclick="openSurprise()">
+
+        <button
+            class="surprise-button"
+            onclick="openSurprise()"
+        >
+
             Open Your Gift 💝
+
         </button>
 
-        <div id="surprise" class="hidden-message">
+
+        <div
+            id="surprise"
+            class="hidden-message"
+        >
+
 
             <p>
+
                 🎉 SURPRISE! 🎉
+
             </p>
+
 
             <br>
 
+
             <p>
+
                 May your birthday be as wonderful,
                 bright and beautiful as you are. 💖
+
             </p>
+
 
             <br>
 
+
             <p>
+
                 Here's to another year of amazing
                 memories, laughter and happiness! 🥳
+
             </p>
 
+
         </div>
+
 
     </div>
 
 </section>
 
 
+
+<!-- =========================
+     FINAL
+========================= -->
+
 <section class="final-section">
 
+
     <h2>
+
         Happy Birthday, Samadrita! 🎂
+
     </h2>
 
+
     <p>
+
         Have the most amazing day! 🌸✨
+
     </p>
+
 
 </section>
 
 
+
+<!-- FOOTER -->
+
 <div class="footer">
+
     Made with ❤️ by Rudra
+
 </div>
 
 
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
+
 
 function unlockPage(event) {
 
     event.preventDefault();
 
-    document.body.classList.remove("locked");
-    document.body.classList.add("unlocked");
 
-    document.getElementById("message").scrollIntoView({
-        behavior: "smooth"
-    });
+    document.body.classList.remove(
+        "locked"
+    );
+
+
+    document.body.classList.add(
+        "unlocked"
+    );
+
+
+    document
+        .getElementById("message")
+        .scrollIntoView({
+
+            behavior: "smooth"
+
+        });
 
 }
 
 
+
 function openSurprise() {
 
-    const surprise = document.getElementById("surprise");
+    const surprise =
+        document.getElementById(
+            "surprise"
+        );
 
-    surprise.classList.add("show");
+
+    surprise.classList.add(
+        "show"
+    );
+
 
     createConfetti();
 
 }
 
 
+
 function createHeart() {
 
-    const heart = document.createElement("div");
+    const heart =
+        document.createElement(
+            "div"
+        );
 
-    heart.className = "heart";
 
-    const symbols = ["💖", "💕", "🌸", "✨", "💗"];
+    heart.className =
+        "heart";
+
+
+    const symbols = [
+
+        "💖",
+        "💕",
+        "🌸",
+        "✨",
+        "💗"
+
+    ];
+
 
     heart.innerHTML =
-        symbols[Math.floor(Math.random() * symbols.length)];
+        symbols[
+            Math.floor(
+                Math.random() *
+                symbols.length
+            )
+        ];
+
 
     heart.style.left =
-        Math.random() * 100 + "vw";
+        Math.random() *
+        100 +
+        "vw";
+
 
     heart.style.animationDuration =
-        (5 + Math.random() * 5) + "s";
+        (
+            5 +
+            Math.random() * 5
+        ) +
+        "s";
+
 
     heart.style.fontSize =
-        (15 + Math.random() * 20) + "px";
+        (
+            15 +
+            Math.random() * 20
+        ) +
+        "px";
 
-    document.body.appendChild(heart);
+
+    document.body.appendChild(
+        heart
+    );
+
 
     setTimeout(() => {
+
         heart.remove();
+
     }, 10000);
 
 }
 
 
-setInterval(createHeart, 900);
+setInterval(
+    createHeart,
+    900
+);
+
 
 
 function createConfetti() {
 
-    const pieces = ["🎉", "✨", "💖", "🎊", "🌸"];
+    const pieces = [
 
-    for (let i = 0; i < 35; i++) {
+        "🎉",
+        "✨",
+        "💖",
+        "🎊",
+        "🌸"
 
-        const confetti = document.createElement("div");
+    ];
+
+
+    for (
+        let i = 0;
+        i < 35;
+        i++
+    ) {
+
+
+        const confetti =
+            document.createElement(
+                "div"
+            );
+
 
         confetti.innerHTML =
-            pieces[Math.floor(Math.random() * pieces.length)];
+            pieces[
+                Math.floor(
+                    Math.random() *
+                    pieces.length
+                )
+            ];
 
-        confetti.style.position = "fixed";
-        confetti.style.left = Math.random() * 100 + "vw";
-        confetti.style.top = "-30px";
-        confetti.style.fontSize = "25px";
-        confetti.style.zIndex = "999";
-        confetti.style.pointerEvents = "none";
+
+        confetti.style.position =
+            "fixed";
+
+
+        confetti.style.left =
+            Math.random() *
+            100 +
+            "vw";
+
+
+        confetti.style.top =
+            "-30px";
+
+
+        confetti.style.fontSize =
+            "25px";
+
+
+        confetti.style.zIndex =
+            "999";
+
+
+        confetti.style.pointerEvents =
+            "none";
+
 
         const duration =
-            2 + Math.random() * 3;
+            2 +
+            Math.random() * 3;
+
 
         confetti.style.transition =
-            `top ${duration}s linear, transform ${duration}s linear`;
 
-        document.body.appendChild(confetti);
+            `top ${duration}s linear,
+             transform ${duration}s linear`;
+
+
+        document.body.appendChild(
+            confetti
+        );
+
 
         setTimeout(() => {
 
-            confetti.style.top = "110vh";
+
+            confetti.style.top =
+                "110vh";
+
 
             confetti.style.transform =
+
                 `rotate(${Math.random() * 720}deg)`;
 
+
         }, 50);
+
 
         setTimeout(() => {
 
@@ -705,7 +1434,9 @@ function createConfetti() {
 
 }
 
+
 </script>
+
 
 </body>
 </html>
